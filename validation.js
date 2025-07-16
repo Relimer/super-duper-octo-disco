@@ -59,8 +59,9 @@ async function is_proxy_malicious(proxy){
 async function is_proxy_alive(proxy, timeout=5000){
   let instance;
   const agent = 'Mozilla/5.0 (compatible;)';
-  sources = getSources('./test-sources.txt');
+  const sources = getSources('./test-sources.txt');
   const url = sources[Math.floor(Math.random() * sources.length)];
+  await sleep(Math.floor(Math.random() * 1000) + 2000);
   if (proxy.startsWith('http://'))
   {
     instance = createAxiosInstanceHTTP(proxy, agent);
