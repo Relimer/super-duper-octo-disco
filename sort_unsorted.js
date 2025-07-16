@@ -1,3 +1,3 @@
-import { validate_proxy } from "./validation.js";
+import { validate_proxies } from "./validation.js";
 
-validate_proxy('./out/unsorted_proxies.txt')
+await validate_proxies('./out/unsorted_proxies.txt')

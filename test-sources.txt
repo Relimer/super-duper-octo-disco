@@ -1,0 +1,10 @@
+https://httpbin.org/status/204
+https://example.com
+https://api64.ipify.org?format=json
+https://icanhazip.com
+https://ifconfig.me
+https://checkip.amazonaws.com
+https://clients3.google.com/generate_204
+http://detectportal.firefox.com/success.txt
+https://wtfismyip.com/text
+https://www.cloudflare.com/cdn-cgi/trace
