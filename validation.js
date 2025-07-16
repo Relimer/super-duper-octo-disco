@@ -50,10 +50,12 @@ export async function validate_proxy(file){
   const fileData = fs.readFileSync(file, 'utf8').split('\n').map(line => line.trim()).filter(line => line.length > 0);
   fileData.forEach(proxy => {
     console.log(`Validating Proxy: ${proxy}`)
-    if(!is_valid(proxy)) {
+    if(is_valid(proxy)) {
       duplicateRemoval('./out/blacklist.txt')
       writeProxies(proxy, './out/blacklist.txt');
     }
   });
 }
-validate_proxy('./out/unsorted_proxies.txt')
+if(process.env.NODE_ENV==='unsorted'){
+  validate_proxy('./out/unsorted_proxies.txt')
+}

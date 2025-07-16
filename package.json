@@ -1,10 +1,16 @@
 {
   "type": "module",
+  "scripts": {
+    "validate_unsorted": "cross-env NODE_ENV=unsorted node validation.js"
+  },
   "dependencies": {
     "axios": "^1.10.0",
     "cheerio": "^1.1.0",
     "https-proxy-agent": "^7.0.6",
     "robots-parser": "^3.0.1",
     "socks-proxy-agent": "^8.0.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
