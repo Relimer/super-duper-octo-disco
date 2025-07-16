@@ -142,9 +142,10 @@ export async function validate_proxies(file){
   blacklistFormat = duplicateRemoval(blacklistFormat, './out/blacklist/blacklist-format.txt')
   writeProxies(blacklistFormat, './out/blacklist/blacklist-format.txt');
   
+  console.log(blacklistDead);
   blacklistDead = duplicateRemoval(blacklistDead, './out/blacklist/blacklist-dead.txt')
   writeProxies(blacklistDead, './out/blacklist/blacklist-dead.txt');
-
+  
   blacklistMalicious = duplicateRemoval(blacklistMalicious, './out/blacklist/blacklist-malicious.txt')
   writeProxies(blacklistMalicious, './out/blacklist/blacklist-malicious.txt');
 
